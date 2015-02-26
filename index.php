@@ -544,7 +544,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<p class="text-center">Copyright © <?php echo date("Y"); ?> Love INC</p>
+							<p class="text-center">Copyright &copy; <?php echo date("Y"); ?> Love INC</p>
 						</div>
 					</div>
 				</div>
