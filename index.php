@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
     <title>Love INC</title>
 </head>
 <body>
@@ -15,6 +16,11 @@
                 <img alt="Love INC" src="img/logo.png">
             </a>
         </div>
+        <ul>
+            <li>
+                
+            </li>
+        </ul>
     </div>
 </nav>
 
