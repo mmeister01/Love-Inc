@@ -69,8 +69,11 @@
             $("[data-animation-effect]").each(function () {
                 var $this = $(this),
                     animationEffect = $this.attr("data-animation-effect");
+                console.log($this +"\n"+animationEffect);
                 if (Modernizr.mq('only all and (min-width: 768px)') && Modernizr.csstransitions) {
+
                     $this.appear(function () {
+                        console.log("blah");
                         setTimeout(function () {
                             $this.addClass('animated object-visible ' + animationEffect);
                         }, 400);
@@ -79,8 +82,7 @@
                     $this.addClass('object-visible');
                 }
             });
-        }
-        ;
+        };
 
         // Isotope filters
         //-----------------------------------------------

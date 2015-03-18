@@ -25,19 +25,24 @@
           rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <!-- Font Awesome CSS -->
-    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
 
     <!-- Plugins -->
-    <link href="css/animations.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet" />
+
+    <link href="css/animate.css" rel="stylesheet" />
 
     <!-- Worthy core CSS file -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
 
     <!-- Custom css -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+
 </head>
 
 <body class="no-trans">
@@ -158,7 +163,7 @@
 <!-- banner end -->
 
 <div class="container wrap">
-    <section id="about">
+    <div id="about" class="section clearfix object-non-visible" data-animation-effect="fadeIn">
         <div class="row">
             <div class="col-md-8">
                 <h1 class="text-center">About Us</h1>
@@ -219,7 +224,7 @@
                      data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
             </div>
         </div>
-    </section>
+    </div>
 </div>
 <footer class="footer">
     <div class="container">
@@ -230,7 +235,7 @@
                 </p>
             </div>
             <div class="col-md-4">
-                <a href="https://smile.amazon.com/ch/38-2765855"><img src="images/smile.png" /></a>
+                <a href="https://smile.amazon.com/ch/38-2765855" target="_blank"><img src="images/smile.png" /></a>
             </div>
             <div class="col-md-1">
                 <button class="btn" id="#loginbtn">Login</button>
@@ -241,9 +246,16 @@
 
 <!-- JavaScript files placed at the end of the document so the pages load faster
     ================================================== -->
-<!-- Jquery and Bootstap core js files -->
-<script type="text/javascript" src="plugins/jquery.min.js"></script>
-<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<!-- Jquery core js files -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Jquery Ui js -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+<!-- Bootstrat core js files -->
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 <!-- Modernizr javascript -->
 <script type="text/javascript" src="plugins/modernizr.js"></script>
@@ -251,6 +263,7 @@
 <!-- Isotope javascript -->
 <script type="text/javascript"
         src="plugins/isotope/isotope.pkgd.min.js"></script>
+
 
 <!-- Backstretch javascript -->
 <script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
