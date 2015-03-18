@@ -8,23 +8,27 @@
  File Description: Place here your custom CSS styles
  */
 .footer {
-	position: fixed;
-	bottom: 0px;
-	width: 100%;
-	height: 60px;
-	background-color: #F5F5F5;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: #F5F5F5;
 }
 
-footer{
-	display: block;
-	box-sizing: border-box;
+footer {
+    display: block;
+    box-sizing: border-box;
 }
 
-.wrap{
-	min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
+.wrap {
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by its height */
+    margin: 0 auto -60px;
+    /* Pad bottom by footer height */
+    padding: 0 0 60px;
+}
+
+h1 {
+    font-family: 'Comfortaa', cursive;
 }
