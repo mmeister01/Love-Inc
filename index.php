@@ -159,10 +159,9 @@
 
 <div class="container wrap">
     <section id="about">
-        <h1 class="text-center">About Us</h1>
-
         <div class="row">
             <div class="col-md-8">
+                <h1 class="text-center">About Us</h1>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac
                 quam tortor. Vivamus luctus dui sed arcu volutpat, vitae mattis neque
                 viverra. Nulla facilisis nibh sit amet finibus interdum. In sed ante
@@ -224,9 +223,19 @@
 </div>
 <footer class="footer">
     <div class="container">
-        <p class="text-muted">
-            Copyright &copy; <?php echo date("Y"); ?> Love Inc of Jackson
-        </p>
+        <div class="row">
+            <div class="col-md-7">
+                <p class="text-muted">
+                    Copyright &copy; <?php echo date("Y"); ?> Love Inc of Jackson
+                </p>
+            </div>
+            <div class="col-md-4">
+                <a href="https://smile.amazon.com/ch/38-2765855"><img src="images/smile.png" /></a>
+            </div>
+            <div class="col-md-1">
+                <button class="btn" id="#loginbtn">Login</button>
+            </div>
+        </div>
     </div>
 </footer>
 
