@@ -45,12 +45,15 @@
 <body class="no-trans">
 <noscript class="text-center">
     <h1>Javascript Disabled!</h1>
+
     <p>
-    <strong>Javascript has been disabled on your browser, please enable it to access the content of this
-        website.</strong>
-        </p>
+        <strong>Javascript has been disabled on your browser, please enable it to access the content of this
+            website.</strong>
+    </p>
     <style type="text/css">
-        #body { display:none; }
+        #body {
+            display: none;
+        }
     </style>
 </noscript>
 
@@ -167,8 +170,8 @@
         </div>
     </div>
     <!-- banner end -->
-
-    <div class="container wrap">
+<div class="wrap">
+    <div class="container">
         <div id="about" class="section">
             <div class="row">
                 <div class="col-md-8">
@@ -238,7 +241,7 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item"
                         src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=se84kndcbippuj0tqcrv7e66tg%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York"
-                        style=" border-width:0 " frameborder="0" scrolling="no"
+                        style=" border-width:0;background-color:#E1FAF2" frameborder="0" scrolling="no"
                         align="center"></iframe>
             </div>
         </div>
@@ -317,6 +320,7 @@
             </div>
         </div>
     </div>
+</div>
 
     <footer class="footer">
         <div class="container">
