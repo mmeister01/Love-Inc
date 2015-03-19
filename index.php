@@ -25,23 +25,24 @@
           rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Font Awesome CSS -->
-    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet"/>
 
     <!-- Plugins -->
-    <link href="css/animations.css" rel="stylesheet" />
+    <link href="css/animations.css" rel="stylesheet"/>
 
-    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet"/>
 
     <!-- Worthy core CSS file -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet"/>
 
     <!-- Custom css -->
-    <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet"/>
 
     <!-- jQuery UI CSS -->
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet"
+          href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"/>
 
 </head>
 
@@ -234,14 +235,47 @@
                 </p>
             </div>
             <div class="col-md-4">
-                <a href="https://smile.amazon.com/ch/38-2765855" target="_blank"><img src="images/smile.png" /></a>
+                <a href="https://smile.amazon.com/ch/38-2765855" target="_blank"><img src="images/smile.png"/></a>
             </div>
             <div class="col-md-1">
-                <button class="btn" id="#loginbtn">Login</button>
+                <button type="button" class="btn" data-toggle="modal" data-target="#loginModal">
+                    Login
+                </button>
             </div>
         </div>
     </div>
 </footer>
+
+<!-- Modals -->
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginLabel">Login</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input name="email" type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input name="password" type="password" class="form-control" id="password"
+                               placeholder="Password">
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!-- JavaScript files placed at the end of the document so the pages load faster
     ================================================== -->

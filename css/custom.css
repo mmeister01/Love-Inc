@@ -50,3 +50,8 @@ header{
     background-color: #080808 !important;
     opacity: 0.6;
 }
+
+.modal-footer
+button {
+    color:black;
+}
