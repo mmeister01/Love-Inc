@@ -7,7 +7,14 @@
  * File Description: Place here your custom scripts
  */
 $(document).ready(function(){
-    $('a[href="#about"]').onclick(function(){
-        $(this).addClass("active");
+
+    $('a[href^="#"]').click(function(){
+
+        $('a[href^="#"]').each(function(){
+            $(this).removeClass("active");
+        });
+
+        $(this).parent("li").addClass("active");
+        $()
     });
 });

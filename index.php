@@ -64,7 +64,7 @@
 <!-- header start -->
 <!-- ================ -->
 
-<header class="header fixed clearfix navbar navbar-fixed-top">
+<header class="header fixed clearfix navbar navbar-fixed-top" id="home">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -120,7 +120,7 @@
                                 <div class="collapse navbar-collapse scrollspy smooth-scroll"
                                      id="navbar-collapse-1">
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li class="active"><a href="#banner">Home</a></li>
+                                        <li class="active"><a href="#home">Home</a></li>
                                         <li><a href="#about">About Us</a></li>
                                         <li><a href="#contact">Calendar</a></li>
                                         <li><a href="#calendar">Contact</a></li>
@@ -150,8 +150,7 @@
     <div class="banner-caption">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2 object-non-visible"
-                     data-animation-effect="fadeIn">
+                <div class="col-md-8 col-md-offset-2 object-non-visible">
                     <h1 class="text-center"></h1>
 
                     <p class="lead text-center"></p>
@@ -163,10 +162,10 @@
 <!-- banner end -->
 
 <div class="container wrap">
-    <div id="about" class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+    <div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
         <div class="row">
             <div class="col-md-8">
-                <h1 class="text-center">About Us</h1>
+                <h1 id="about" class="text-center">About Us</h1>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac
                 quam tortor. Vivamus luctus dui sed arcu volutpat, vitae mattis neque
                 viverra. Nulla facilisis nibh sit amet finibus interdum. In sed ante
