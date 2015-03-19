@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     $('a[href^="#"]').click(function(){
 
-        $('a[href^="#"]').each(function(){
+        $('a[href^="#"]').forEach(function(){
             $(this).removeClass("active");
         });
 
