@@ -62,7 +62,7 @@
 <!-- header start -->
 <!-- ================ -->
 
-<header class="header fixed clearfix navbar navbar-fixed-top" id="home">
+<header class="header fixed clearfix navbar navbar-fixed-top">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -143,7 +143,7 @@
 
 <!-- banner start -->
 <!-- ================ -->
-<div id="banner" class="banner">
+<div id="home" class="banner">
     <div class="banner-image"></div>
     <div class="banner-caption">
         <div class="container">
@@ -223,10 +223,13 @@
 
     <div id="calendar" class="section text-center">
         <h1>Calendar</h1>
-        <iframe
-            src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=700&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=se84kndcbippuj0tqcrv7e66tg%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York"
-            style=" border-width:0 " width="900" height="700" frameborder="0" scrolling="no"
-            align="center"></iframe>
+
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+                    src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=se84kndcbippuj0tqcrv7e66tg%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York"
+                    style=" border-width:0 " frameborder="0" scrolling="no"
+                    align="center"></iframe>
+        </div>
     </div>
 
 
@@ -306,10 +309,19 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div id="footer" align="center">
+            <div class="col-md-6">
+                Copyright &copy; <?php echo date("Y"); ?> Love INC of Jackson
+            </div>
+            <div class="col-md-4">
                 <h3>Contact Info</h3>
             </div>
+            <div class="col-md-2">
+                <button type="button" class="btn" data-toggle="modal" data-target="#loginModal">
+                    Login
+                </button>
+            </div>
         </div>
+    </div>
     </div>
 </footer>
 

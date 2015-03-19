@@ -37,13 +37,13 @@ h1 {
         height:150px;
     }
     .wrap{
+        margin: 0 auto -150px;
         padding: 0 0 150px;
     }
 }
 
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 header{
@@ -54,10 +54,4 @@ header{
 .modal-footer
 button {
     color:black;
-}
-body{
-    position: absolute;
-    margin:0;
-    padding:0;
-    width:100%;
 }
