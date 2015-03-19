@@ -10,8 +10,6 @@
 (function ($) {
     $(document).ready(function () {
 
-        $(".banner-image").backstretch('images/love_banner.jpg');
-
         // Fixed header
         //-----------------------------------------------
         $(window).scroll(function () {

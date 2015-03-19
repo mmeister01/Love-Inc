@@ -6,3 +6,10 @@
  * License: Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
  * File Description: Place here your custom scripts
  */
+
+$(".banner-image").backstretch(['images/love_banner.jpg',
+    'images/mission.jpg'],
+    {
+        duration:3000, fade: 750
+    }
+);
