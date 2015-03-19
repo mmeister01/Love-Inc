@@ -1,3 +1,7 @@
+<?php
+require 'lib/mysql.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
