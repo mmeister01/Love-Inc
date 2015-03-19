@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE 9]>
-<html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <title>Love INC</title>
@@ -44,18 +40,20 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
 
 </head>
+    <!--Facebook Widget-->
+        <body class="no-trans">
+            <div id="fb-root"></div>
+            <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=825907460758802&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-<body class="no-trans">
-<div id="fb-root"></div>
-<script>(function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=825907460758802&version=v2.0";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-<!-- scrollToTop -->
+            <!-- scrollToTop -->
 <!-- ================ -->
 <div class="scrollToTop">
     <i class="icon-up-open-big"></i>
@@ -71,7 +69,7 @@
 
                 <!-- header-left start -->
                 <!-- ================ -->
-                <div class="header-left clearfix">
+                <!--<div class="header-left clearfix">-->
 
                     <!-- logo -->
                     <div class="logo smooth-scroll">
@@ -110,9 +108,10 @@
                                 <div class="navbar-header">
                                     <button type="button" class="navbar-toggle"
                                             data-toggle="collapse" data-target="#navbar-collapse-1">
-                                        <span class="sr-only">Toggle navigation</span> <span
-                                            class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                            class="icon-bar"></span>
+                                        <span class="sr-only">Toggle navigation</span> 
+                                        <span class="icon-bar"></span> 
+                                        <span class="icon-bar"></span> 
+                                        <span class="icon-bar"></span>
                                     </button>
                                 </div>
 
@@ -143,7 +142,7 @@
 </header>
 <!-- header end -->
 
-<!-- banner start -->
+<!-- banner start-->
 <!-- ================ -->
 <div id="banner" class="banner">
     <div class="banner-image"></div>
@@ -163,7 +162,6 @@
 <!-- banner end -->
 
 <div class="container wrap">
-    <div id="about" class="section clearfix object-non-visible" data-animation-effect="fadeIn">
         <div class="row">
             <div class="col-md-8">
                 <h1 class="text-center">About Us</h1>
@@ -226,6 +224,27 @@
         </div>
     </div>
 </div>
+
+<div class="container wrap">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="text-center">Calendar</h1>
+                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=700&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=se84kndcbippuj0tqcrv7e66tg%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York" style=" border-width:0 " width="900" height="700" frameborder="0" scrolling="no" align="center"></iframe>
+            </div>
+        </div>
+</div>
+
+
+<div class="container wrap">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="text-center">Next Section</h1>
+                Next Section
+            </div>
+        </div>
+</div>
+
+
 <footer class="footer">
     <div class="container">
         <div class="row">
