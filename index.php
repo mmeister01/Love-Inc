@@ -321,13 +321,13 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 hidden-xs">
                     Copyright &copy; <?php echo date("Y"); ?> Love INC of Jackson
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-6">
                     <h3>Contact Info</h3>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-xs-1">
                     <button type="button" class="btn" data-toggle="modal" data-target="#loginModal">
                         Login
                     </button>
