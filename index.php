@@ -172,7 +172,7 @@
     <!-- banner end -->
 <div class="wrap">
     <div class="container">
-        <div id="about" class="section">
+        <div id="about" class="section object-non-visible" data-animation-effect="fadeIn">
             <div class="row">
                 <div class="col-md-8">
                     <h1 class="text-center">About Us</h1>
@@ -235,7 +235,7 @@
             </div>
         </div>
 
-        <div id="calendar" class="section text-center">
+        <div id="calendar" class="section text-center object-non-visible" data-animation-effect="fadeIn"">
             <h1>Calendar</h1>
 
             <div class="embed-responsive embed-responsive-16by9">
@@ -247,7 +247,7 @@
         </div>
 
 
-        <div id="donors" class="section text-center">
+        <div id="donors" class="section text-center object-non-visible" data-animation-effect="fadeIn"">
             <div class="row">
                 <div class="col-md-8">
                     <h1>Donors</h1>

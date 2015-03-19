@@ -72,7 +72,10 @@
                         setTimeout(function () {
                             $this.addClass('animated object-visible ' + animationEffect);
                         }, 400);
-                    }, {accX: 0, accY: 150});
+                    }, {accX: 0, accY: -150});
+
+
+
                 } else {
                     $this.addClass('object-visible');
                 }
