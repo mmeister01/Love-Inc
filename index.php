@@ -293,7 +293,7 @@
             <div class="col-md-4">
                 <div id="amznCharityBanner"
                      style='width: 300px !important; height: 250px !important; text-align: center !important; position: relative; background-image: url("https://d1ev1rt26nhnwq.cloudfront.net/ccmtblv2.png") !important; background-repeat: no-repeat !important;'>
-                    <a style="padding: 100px 10px !important; left: 0px !important; top: 0px !important; right: 0px !important; bottom: 0px !important; position: absolute !important;"
+                    <a target="_blank" style="padding: 100px 10px !important; left: 0px !important; top: 0px !important; right: 0px !important; bottom: 0px !important; position: absolute !important;"
                        href="http://smile.amazon.com/ch/38-2765855">
                         <div id="bannerTextWrapper" style="height: 100%; overflow: hidden;"><span
                                 style="height: 100%; vertical-align: middle; display: inline-block;"></span><span
