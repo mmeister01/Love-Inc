@@ -137,9 +137,13 @@ session_start();
                                          id="navbar-collapse-1">
                                         <ul class="nav navbar-nav navbar-right">
                                             <li class="active"><a href="#home">Home</a></li>
-                                            <li><a href="#about">About Us</a></li>
-                                            <li><a href="#calendar">Calendar</a></li>
-                                            <li><a href="#donors">Donors</a></li>
+                                            <?php
+                                            $sql = "SELECT name, slug FROM section";
+                                            $result = mysqli_query($con,$sql);
+                                            $row = mysqli_fetch_array($result);
+                                            $navArray = array();
+                                            function navBar()
+                                            ?>
                                         </ul>
                                     </div>
 
