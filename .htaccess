@@ -1,4 +1,0 @@
-RewriteEngine on
-RewriteCond $1 !^(index\.php)
-RewriteRule ^(.*)$ /index.php$1 [L,R=301]
-RewriteCond $1 !^(index\.php|*\.jpg|*\.gif|*\.css|*\.png)
