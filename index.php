@@ -138,11 +138,17 @@ session_start();
                                         <ul class="nav navbar-nav navbar-right">
                                             <li class="active"><a href="#home">Home</a></li>
                                             <?php
-                                            $sql = "SELECT name, slug FROM section";
-                                            $result = mysqli_query($con,$sql);
-                                            $row = mysqli_fetch_array($result);
-                                            $navArray = array();
-                                            function navBar()
+                                            $sql = 'SELECT * FROM section ORDER BY `order`';
+                                            $result = mysqli_query($con, $sql);
+                                            while($row = mysqli_fetch_array($result)){
+
+                                            }
+
+                                            function genNavBar()
+                                            {
+
+                                            }
+
                                             ?>
                                         </ul>
                                     </div>
@@ -198,42 +204,44 @@ session_start();
             </div>
         </div>
 
-        <div id="calendar" class="section text-center object-non-visible" data-animation-effect="fadeIn"">
-            <h1>Calendar</h1>
+        <div id="calendar" class="section text-center object-non-visible" data-animation-effect="fadeIn"
+        ">
+        <h1>Calendar</h1>
 
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item"
-                        src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=se84kndcbippuj0tqcrv7e66tg%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York"
-                        style=" border-width:0;background-color:#E1FAF2" frameborder="0" scrolling="no"
-                        align="center"></iframe>
-            </div>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+                    src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=se84kndcbippuj0tqcrv7e66tg%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York"
+                    style=" border-width:0;background-color:#E1FAF2" frameborder="0" scrolling="no"
+                    align="center"></iframe>
         </div>
+    </div>
 
 
-        <div id="donors" class="section text-center object-non-visible" data-animation-effect="fadeIn"">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1>Donors</h1>
+    <div id="donors" class="section text-center object-non-visible" data-animation-effect="fadeIn"
+    ">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Donors</h1>
 
-                </div>
-                <!--Amazon Smile Link-->
-                <div class="col-md-4">
-                    <div id="amznCharityBanner"
-                         style='width: 300px !important; height: 250px !important; text-align: center !important; position: relative; background-image: url("https://d1ev1rt26nhnwq.cloudfront.net/ccmtblv2.png") !important; background-repeat: no-repeat !important;'>
-                        <a target="_blank"
-                           style="padding: 100px 10px !important; left: 0px !important; top: 0px !important; right: 0px !important; bottom: 0px !important; position: absolute !important;"
-                           href="http://smile.amazon.com/ch/38-2765855">
-                            <div id="bannerTextWrapper" style="height: 100%; overflow: hidden;"><span
-                                    style="height: 100%; vertical-align: middle; display: inline-block;"></span><span
-                                    style="margin: 0px; width: 95%; color: black !important; line-height: 26px; overflow: hidden; font-family: Arial; font-size: 26px; text-decoration: none; vertical-align: middle; display: inline-block;">Love Inc Of Jackson County Area</span>
-                            </div>
-                        </a>
+        </div>
+        <!--Amazon Smile Link-->
+        <div class="col-md-4">
+            <div id="amznCharityBanner"
+                 style='width: 300px !important; height: 250px !important; text-align: center !important; position: relative; background-image: url("https://d1ev1rt26nhnwq.cloudfront.net/ccmtblv2.png") !important; background-repeat: no-repeat !important;'>
+                <a target="_blank"
+                   style="padding: 100px 10px !important; left: 0px !important; top: 0px !important; right: 0px !important; bottom: 0px !important; position: absolute !important;"
+                   href="http://smile.amazon.com/ch/38-2765855">
+                    <div id="bannerTextWrapper" style="height: 100%; overflow: hidden;"><span
+                            style="height: 100%; vertical-align: middle; display: inline-block;"></span><span
+                            style="margin: 0px; width: 95%; color: black !important; line-height: 26px; overflow: hidden; font-family: Arial; font-size: 26px; text-decoration: none; vertical-align: middle; display: inline-block;">Love Inc Of Jackson County Area</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
 </div>
+    </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
