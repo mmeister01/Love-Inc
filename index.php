@@ -181,7 +181,7 @@ session_start();
                 <div class="col-md-8">
                     <h1 class="text-center">About Us</h1>
                     <?php
-                    $query = "SELECT content FROM section WHERE id='about'";
+                    $query = "SELECT content FROM section WHERE name='about'";
                     $result = mysqli_query($con, $query);
                     $row = mysqli_fetch_array($result);
                     echo $row['content'];
