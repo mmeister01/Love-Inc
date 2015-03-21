@@ -24,15 +24,6 @@ footer {
 h1 {
     font-family: 'Comfortaa', cursive;
 }
-@media screen and (max-width: 1000px){
-    .footer{
-        height:150px;
-    }
-    .wrap{
-        margin: 0 auto -150px;
-        padding: 0 0 150px;
-    }
-}
 
 html, body {
     max-width: 100%;
