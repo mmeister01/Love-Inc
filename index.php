@@ -192,11 +192,14 @@ session_start();
         <?php
         $sql = "SELECT * FROM section ORDER BY `order`";
         $result = mysqli_query($con, $sql);
+
         while ($section = mysqli_fetch_array($result)) {
             ?>
             <div id="<?php echo $section['slug']; ?>" class="section object-non-visible"
                  data-animation-effect="fadeIn">
+
                 <?php
+                //About us section
                 if (strcmp($section['slug'], "about-us") == 0) {
                     ?>
                     <div class="row">
@@ -209,18 +212,19 @@ session_start();
                         <div class="col-md-4">
                             <?php
                             $sql = "SELECT info FROM info WHERE name='Facebook'";
-                            $result = mysqli_query($con, $sql);
+                            $query = mysqli_query($con, $sql);
                             ?>
-                            <div class="fb-like-box" data-href="<?php echo mysqli_fetch_array($result)['info'] ?>"
+                            <div class="fb-like-box" data-href="<?php echo mysqli_fetch_array($query)['info'] ?>"
                                  data-colorscheme="light"
                                  data-show-faces="true" data-header="true" data-stream="true"
                                  data-show-border="true"></div>
                         </div>
                     </div>
-                <?php } else if (strcmp($section['slug'], "calendar") == 0) { ?>
+                <?php } //Calendar section
+                else if (strcmp($section['slug'], "calendar") == 0) { ?>
 
-                <?php } else if (strcmp($section['slug'], "donors") == 0) { ?>
-                    <h1 class="text-center"><?php echo $section['name']; ?></h1>
+                <?php } //Donors section
+                else if (strcmp($section['slug'], "donors") == 0) { ?>
                     <div class="row">
                         <div class="col-md-8">
                             <h1 class="text-center"><?php echo $section['name']; ?></h1>
@@ -229,16 +233,21 @@ session_start();
                             ?>
                         </div>
                         <div class="col-md-4">
-                            <?php
-                            $sql = "SELECT info FROM info WHERE name='Facebook'";
-                            $result = mysqli_query($con, $sql);
-                            ?>
-                            <div class="fb-like-box" data-href="<?php echo mysqli_fetch_array($result)['info'] ?>"
-                                 data-colorscheme="light"
-                                 data-show-faces="true" data-header="true" data-stream="true"
-                                 data-show-border="true"></div>
+                            <!--Amazon Smile Link-->
+                            <div id="amznCharityBanner"
+                                 style='width: 300px !important; height: 250px !important; text-align: center !important; position: relative; background-image: url("https://d1ev1rt26nhnwq.cloudfront.net/ccmtblv2.png") !important; background-repeat: no-repeat !important;'>
+                                <a target="_blank"
+                                   style="padding: 100px 10px !important; left: 0px !important; top: 0px !important; right: 0px !important; bottom: 0px !important; position: absolute !important;"
+                                   href="http://smile.amazon.com/ch/38-2765855">
+                                    <div id="bannerTextWrapper" style="height: 100%; overflow: hidden;"><span
+                                            style="height: 100%; vertical-align: middle; display: inline-block;"></span><span
+                                            style="margin: 0px; width: 95%; color: black !important; line-height: 26px; overflow: hidden; font-family: Arial; font-size: 26px; text-decoration: none; vertical-align: middle; display: inline-block;">Love Inc Of Jackson County Area</span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
+
                 <?php
                 } else {
                     ?>
