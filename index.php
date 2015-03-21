@@ -140,13 +140,16 @@ session_start();
                                             <?php
                                             $sql = 'SELECT * FROM section ORDER BY `order`';
                                             $result = mysqli_query($con, $sql);
-                                            while($row = mysqli_fetch_array($result)){
-
+                                            while ($row = mysqli_fetch_array($result)) {
+                                                if ($row['parent'] > 0) {
+                                                    genNavBar($row);
+                                                } else {
+                                                    echo '<li><a href="#' . $row["slug"] . '">' . $row["name"] . '</a></li>';
+                                                }
                                             }
 
-                                            function genNavBar()
+                                            function genNavBar($row)
                                             {
-
                                             }
 
                                             ?>
@@ -186,62 +189,71 @@ session_start();
     <!-- banner end -->
 <div class="wrap">
     <div class="container">
-        <div id="about" class="section object-non-visible" data-animation-effect="fadeIn">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1 class="text-center">About Us</h1>
-                    <?php
-                    $query = "SELECT content FROM section WHERE name='about'";
-                    $result = mysqli_query($con, $query);
-                    $row = mysqli_fetch_array($result);
-                    echo $row['content'];
+        <?php
+        $sql = "SELECT * FROM section ORDER BY `order`";
+        $result = mysqli_query($con, $sql);
+        while ($section = mysqli_fetch_array($result)) {
+            ?>
+            <div id="<?php echo $section['slug']; ?>" class="section object-non-visible"
+                 data-animation-effect="fadeIn">
+                <?php
+                if (strcmp($section['slug'], "about-us") == 0) {
                     ?>
-                </div>
-                <div class="col-md-4">
-                    <div class="fb-like-box" data-href="https://www.facebook.com/loveofjackson" data-colorscheme="light"
-                         data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
-                </div>
-            </div>
-        </div>
-
-        <div id="calendar" class="section text-center object-non-visible" data-animation-effect="fadeIn"
-        ">
-        <h1>Calendar</h1>
-
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"
-                    src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=se84kndcbippuj0tqcrv7e66tg%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York"
-                    style=" border-width:0;background-color:#E1FAF2" frameborder="0" scrolling="no"
-                    align="center"></iframe>
-        </div>
-    </div>
-
-
-    <div id="donors" class="section text-center object-non-visible" data-animation-effect="fadeIn"
-    ">
-    <div class="row">
-        <div class="col-md-8">
-            <h1>Donors</h1>
-
-        </div>
-        <!--Amazon Smile Link-->
-        <div class="col-md-4">
-            <div id="amznCharityBanner"
-                 style='width: 300px !important; height: 250px !important; text-align: center !important; position: relative; background-image: url("https://d1ev1rt26nhnwq.cloudfront.net/ccmtblv2.png") !important; background-repeat: no-repeat !important;'>
-                <a target="_blank"
-                   style="padding: 100px 10px !important; left: 0px !important; top: 0px !important; right: 0px !important; bottom: 0px !important; position: absolute !important;"
-                   href="http://smile.amazon.com/ch/38-2765855">
-                    <div id="bannerTextWrapper" style="height: 100%; overflow: hidden;"><span
-                            style="height: 100%; vertical-align: middle; display: inline-block;"></span><span
-                            style="margin: 0px; width: 95%; color: black !important; line-height: 26px; overflow: hidden; font-family: Arial; font-size: 26px; text-decoration: none; vertical-align: middle; display: inline-block;">Love Inc Of Jackson County Area</span>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h1 class="text-center"><?php echo $section['name']; ?></h1>
+                            <?php
+                            echo $section['content'];
+                            ?>
+                        </div>
+                        <div class="col-md-4">
+                            <?php
+                            $sql = "SELECT info FROM info WHERE name='Facebook'";
+                            $result = mysqli_query($con, $sql);
+                            ?>
+                            <div class="fb-like-box" data-href="<?php echo mysqli_fetch_array($result)['info'] ?>"
+                                 data-colorscheme="light"
+                                 data-show-faces="true" data-header="true" data-stream="true"
+                                 data-show-border="true"></div>
+                        </div>
                     </div>
-                </a>
+                <?php } else if (strcmp($section['slug'], "calendar") == 0) { ?>
+
+                <?php } else if (strcmp($section['slug'], "donors") == 0) { ?>
+                    <h1 class="text-center"><?php echo $section['name']; ?></h1>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h1 class="text-center"><?php echo $section['name']; ?></h1>
+                            <?php
+                            echo $section['content'];
+                            ?>
+                        </div>
+                        <div class="col-md-4">
+                            <?php
+                            $sql = "SELECT info FROM info WHERE name='Facebook'";
+                            $result = mysqli_query($con, $sql);
+                            ?>
+                            <div class="fb-like-box" data-href="<?php echo mysqli_fetch_array($result)['info'] ?>"
+                                 data-colorscheme="light"
+                                 data-show-faces="true" data-header="true" data-stream="true"
+                                 data-show-border="true"></div>
+                        </div>
+                    </div>
+                <?php
+                } else {
+                    ?>
+                    <h1 class="text-center"><?php echo $section['name']; ?></h1>
+                    <?php
+                    echo $section['content'];
+                    ?>
+                <?php
+                }
+                ?>
             </div>
-        </div>
+        <?php
+        } ?>
     </div>
 </div>
-    </div>
-    </div>
 
     <footer class="footer">
         <div class="container">
