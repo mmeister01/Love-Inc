@@ -7,6 +7,5 @@ $(".banner-image").backstretch(['images/love_banner.jpg',
 );
 
 $("#loginSubmit").click(function(event){
-    event.preventDefault();
 
 });
