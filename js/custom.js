@@ -5,3 +5,8 @@ $(".banner-image").backstretch(['images/love_banner.jpg',
         duration:3000, fade: 750
     }
 );
+
+$("#loginSubmit").click(function(event){
+    event.preventDefault();
+
+});

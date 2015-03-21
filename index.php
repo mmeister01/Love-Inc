@@ -222,7 +222,16 @@ session_start();
                     </div>
                 <?php } //Calendar section
                 else if (strcmp($section['slug'], "calendar") == 0) { ?>
+                    <div class="text-center">
+                        <h1><?php echo $section['name']; ?></h1>
 
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item"
+                                    src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=se84kndcbippuj0tqcrv7e66tg%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York"
+                                    style=" border-width:0;background-color:#E1FAF2" frameborder="0" scrolling="no"
+                                    align="center"></iframe>
+                        </div>
+                    </div>
                 <?php } //Donors section
                 else if (strcmp($section['slug'], "donors") == 0) { ?>
                     <div class="row">
@@ -295,18 +304,17 @@ session_start();
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input name="email" type="email" class="form-control" id="email" placeholder="Enter email">
+                            <label for="loginEmail">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter email" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input name="password" type="password" class="form-control" id="password"
-                                   placeholder="Password">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
                         </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button id="loginSubmit" type="submit" class="btn btn-default">Submit</button>
                 </div>
                 </form>
             </div>
