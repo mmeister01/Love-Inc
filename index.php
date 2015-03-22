@@ -193,10 +193,13 @@ session_start();
         <?php
         $sql = "SELECT * FROM section ORDER BY `order`";
         $result = mysqli_query($con, $sql);
-
+        $count = 1;
         while ($section = mysqli_fetch_array($result)) {
             ?>
-            <div id="<?php echo $section['slug']; ?>" class="section object-non-visible"
+            <div id="<?php echo $section['slug']; ?>" class="section object-non-visible
+            <?php if ($count % 2 != 0) {
+                echo " sectionColor";
+            } ?>"
                  data-animation-effect="fadeIn">
 
                 <?php
@@ -269,7 +272,8 @@ session_start();
                 }
                 ?>
             </div>
-        <?php
+            <?php
+            $count++;
         } ?>
     </div>
 </div>
@@ -310,7 +314,8 @@ session_start();
                         </div>
                         <div class="form-group">
                             <label for="loginPassword">Password</label>
-                            <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password"
+                                   required>
                         </div>
                 </div>
                 <div class="modal-footer">
