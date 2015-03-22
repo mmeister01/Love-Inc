@@ -46,7 +46,7 @@ session_start();
           href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"/>
 
 </head>
-<!--Facebook Widget-->
+
 <body class="no-trans">
 <noscript class="text-center">
     <h1>Javascript Disabled!</h1>
@@ -62,6 +62,7 @@ session_start();
     </style>
 </noscript>
 
+<!--Facebook Widget-->
 <div id="fb-root"></div>
 <script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -142,7 +143,7 @@ session_start();
                                             $sql = 'SELECT * FROM section ORDER BY `order`';
                                             $result = mysqli_query($con, $sql);
                                             while ($row = mysqli_fetch_array($result)) {
-                                                if ($row['parent'] > 0) {
+                                                if ($row['parent'] > 0 && $row['child']) {
                                                     genNavBar($row);
                                                 } else {
                                                     echo '<li><a href="#' . $row["slug"] . '">' . $row["name"] . '</a></li>';
