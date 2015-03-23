@@ -6,7 +6,7 @@ $(".banner-image").backstretch(['images/love_banner.jpg',
     }
 );
 
-$('#loginModal').on('hidden.bs.modal', function(){
+$('#loginModal').on('hidden.bs.modal', function () {
     $("div#loginEmail").removeClass("has-error");
     $("label[for='loginEmailInput']").text("Email address");
 
@@ -47,7 +47,31 @@ $('#loginSubmit').click(function (event) {
                     $("div#loginEmail").addClass("has-error");
                     $("label[for='loginEmailInput']").text("Please enter a valid email address!");
                 }
+                else if (result == 'email_not_found') {
+                    $("div#loginEmail").addClass("has-error");
+                    $("label[for='loginEmailInput']").text("Email address not found!");
+                }
+                else if (result == 'wrong_password') {
+                    $("div#loginPassword").addClass("has-error");
+                    $("label[for='loginPasswordInput']").text("Wrong Password!");
+                }
+                else if (result == 'ok') {
+                    location.reload();
+                }
             }
         });
     }
+});
+
+$('#logoutBtn').click(function () {
+    $.ajax({
+        type: "POST",
+        url: "lib/login.php",
+        data: "logout="+true,
+        success: function (result) {
+            if(result=="logout"){
+                location.reload();
+            }
+        }
+    });
 });

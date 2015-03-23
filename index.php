@@ -1,7 +1,23 @@
 <?php
+session_start();
+
 date_default_timezone_set("America/New_York");
 require 'lib/mysql.php';
-session_start();
+
+if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] && isset($_SESSION['userid'])){
+    $sql = 'SELECT `FirstName`, `LastName` FROM `user` WHERE `id`="'.$_SESSION["userid"].'"';
+   $result =  mysqli_query($con, $sql);
+    if(!$result){
+        session_destroy();
+        header('Location: index.php');
+        exit();
+    }
+    else{
+        $row = mysqli_fetch_array($result);
+        $firstName = $row['FirstName'];
+        $lastName = $row['LastName'];
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -272,51 +288,75 @@ session_start();
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 hidden-xs">
+                <div class="col-md-4 hidden-xs">
                     Copyright &copy; <?php echo date("Y"); ?> Love INC of Jackson
                 </div>
                 <div class="col-md-4 col-xs-6">
                     <h3>Contact Info</h3>
                 </div>
-                <div class="col-md-2 col-xs-1">
-                    <button type="button" class="btn" data-toggle="modal" data-target="#loginModal">
-                        Login
-                    </button>
+                <div class="col-md-4 col-xs-1">
+                    <?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) { ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class="text-muted">Logged in as </span><?php echo $firstName . " " . $lastName; ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn" id="logoutBtn">
+                                    Logout
+                                </button>
+                            </div>
+                        </div>
+                        <?php } else {
+                        ?>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#loginModal">
+                            Login
+                        </button>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Modals -->
-    <!-- Login Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="loginLabel">Login</h4>
+    <?php if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']) { ?>
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="loginLabel">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div id="loginEmail" class="form-group">
+                                <label class="control-label" for="loginEmailInput">Email address</label>
+                                <input type="email" class="form-control" id="loginEmailInput" placeholder="Enter email"
+                                       required>
+                            </div>
+                            <div id="loginPassword" class="form-group">
+                                <label class="control-label" for="loginPasswordInput">Password</label>
+                                <input type="password" class="form-control" id="loginPasswordInput"
+                                       placeholder="Password"
+                                       required>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button id="loginSubmit" type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                    </form>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <div id="loginEmail" class="form-group">
-                            <label class="control-label" for="loginEmailInput">Email address</label>
-                            <input type="email" class="form-control" id="loginEmailInput" placeholder="Enter email" required>
-                        </div>
-                        <div id="loginPassword" class="form-group">
-                            <label class="control-label" for="loginPasswordInput">Password</label>
-                            <input type="password" class="form-control" id="loginPasswordInput" placeholder="Password"
-                                   required>
-                        </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button id="loginSubmit" type="submit" class="btn btn-default">Submit</button>
-                </div>
-                </form>
             </div>
         </div>
-    </div>
+    <?php } ?>
 </span>
 
 <!-- JavaScript files placed at the end of the document so the pages load faster
