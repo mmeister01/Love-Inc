@@ -6,6 +6,17 @@ $(".banner-image").backstretch(['images/love_banner.jpg',
     }
 );
 
+$('#loginModal').on('hidden.bs.modal', function(){
+    $("div#loginEmail").removeClass("has-error");
+    $("label[for='loginEmailInput']").text("Email address");
+
+    $("div#loginPassword").removeClass("has-error");
+    $("label[for='loginPasswordInput']").text("Password");
+
+    $('#loginEmailInput').val('');
+    $('#loginPasswordInput').val('');
+});
+
 $('#loginSubmit').click(function (event) {
     event.preventDefault();
 
