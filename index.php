@@ -299,13 +299,13 @@ session_start();
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="form-group">
-                            <label for="loginEmail">Email address</label>
-                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter email" required>
+                        <div id="loginEmail" class="form-group">
+                            <label class="control-label" for="loginEmailInput">Email address</label>
+                            <input type="email" class="form-control" id="loginEmailInput" placeholder="Enter email" required>
                         </div>
-                        <div class="form-group">
-                            <label for="loginPassword">Password</label>
-                            <input type="password" class="form-control" id="loginPassword" placeholder="Password"
+                        <div id="loginPassword" class="form-group">
+                            <label class="control-label" for="loginPasswordInput">Password</label>
+                            <input type="password" class="form-control" id="loginPasswordInput" placeholder="Password"
                                    required>
                         </div>
                 </div>
