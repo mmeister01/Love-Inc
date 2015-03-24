@@ -17,6 +17,15 @@ $('#loginModal').on('hidden.bs.modal', function () {
     $('#loginPasswordInput').val('');
 });
 
+$('#loginModal').on('show.bs.modal',function(){
+    setTimeout(function (){
+        $('#loginEmailInput').focus();
+    }, 1000);
+
+});
+
+
+
 $('#loginSubmit').click(function (event) {
     event.preventDefault();
 

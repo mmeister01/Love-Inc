@@ -338,8 +338,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] && isset($_SESSION['use
                         <form>
                             <div id="loginEmail" class="form-group">
                                 <label class="control-label" for="loginEmailInput">Email address</label>
-                                <input type="email" class="form-control" id="loginEmailInput" placeholder="Enter email"
-                                       required>
+                                <input type="email" class="form-control" id="loginEmailInput" placeholder="Enter email" required autofocus>
                             </div>
                             <div id="loginPassword" class="form-group">
                                 <label class="control-label" for="loginPasswordInput">Password</label>
